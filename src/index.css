@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.dog-row {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.avatar-container {
+  padding-top: 15px;
+  width: 60px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.dog-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dog-info {
+  padding-top: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dog-name {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.dog-weight {
+  font-size: 14px;
+  color: #666;
+}
+
+.dog-list-header {
+  text-align: center;
+  font-size: 32px; 
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #f0f8ff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e0e0e0; 
+}
+
+.dog-list-header::after {
+  content: "";
+  display: block;
+  width: 50px; 
+  height: 4px; 
+  background-color: #ff6347; 
+  margin: 10px auto 0;
+  border-radius: 2px; 
+}
+
+.zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.zoom-content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoom-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+  cursor: pointer;
 }
